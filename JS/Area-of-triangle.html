@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Triangle</title>
+    </head>
+    <body >
+        <center>
+        <div style=" color:darksalmon ; padding: 100px; border: 2px solid ; border-radius: 15px; border-color: rgb(199, 171, 139); width: 200;" >
+        Enter the base of triangle :
+        <input type="number" id="base">
+        
+
+        Enter the Height of triangle :
+         <input type="number" id="height">
+        
+         <button onclick="areafunction()">Show Area</button>
+
+        <h2 id="result"></h2>
+        </div>
+        </center>
+        <script>
+
+            function areafunction()
+            {
+                const base = parseFloat(document.getElementById("base").value);
+                const height = parseFloat(document.getElementById("height").value);
+            
+
+             area= 0.5 * base * height;
+             document.getElementById("result").textContent= "Area of triangle is equal to "+area;
+
+            }
+            
+        </script>
+        
+    </body>
+</html>

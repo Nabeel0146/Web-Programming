@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Square Root</title>
+    </head>
+    <body>
+        <center>
+            <h2>Square root Calculator</h2>
+            <label for="number">Enter a number : </label>
+            <input type="number" id="number">
+            <button onclick="sqrroot()"> Find</button>
+
+            <br>
+            <h3 id="result"></h3>
+        </center>
+
+        <script>
+            function sqrroot(){
+                const number=document.getElementById('number').value;
+                const num = parseFloat(number);
+
+                root= Math.sqrt(num);
+
+                document.getElementById("result").textContent="Square root is equal to "+ root;
+            }
+        </script>
+    </body>
+</html>

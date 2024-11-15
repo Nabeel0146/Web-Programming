@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Prime or Not</title>
+    </head>
+    <body>
+        <center>
+            <h2>Prime or Not??</h2>
+            <label for="">Enter a number</label>
+            <input type="number" id="number">
+            <button onclick="primeornot()">Find</button>
+
+
+            <p id="result"></p>
+            <script>
+                function primeornot() {
+                    let num = document.getElementById("number").value;
+                    num = parseInt(num);  
+                    let resultText = '';
+    
+                    
+                    if (num <= 1) {
+                        resultText = num + " is not a prime number.";
+                    } else {
+                        let isPrime = true;  
+    
+                        for (let i = 2; i <= Math.sqrt(num); i++) {
+                            if (num % i === 0) {
+                                isPrime = false;
+                                break; 
+                            }
+                        }
+    
+                        
+                        resultText = isPrime ? num + " is a prime number." : num + " is not a prime number.";
+                    }
+    
+                    
+                    document.getElementById("result").innerText = resultText;
+                }
+            </script>
+        </center>
+
+    </body>
+</html>

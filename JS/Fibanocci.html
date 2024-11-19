@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Fibanocci</title>
+    </head>
+    <body>
+        <center>
+        <h2>Program to find Fibanocci Series</h2>
+        
+        <label for="">Enter number</label>
+        <input type="number" id="limit">
+        <button onclick="findfibanocci()">Print Fibanocci Series</button>
+
+        <p id="result"></p>
+
+        <script>
+            function findfibanocci(){
+                const limit=parseInt(document.getElementById("limit").value);
+                let fibanocciseries=[];
+                let a=0, b=1;
+                for (let i=1; i<=limit; i++){
+                    fibanocciseries.push(a);
+                    let nextterm=a+b;
+                    a=b;
+                    b=nextterm;
+                }
+                document.getElementById("result").innerText=fibanocciseries;
+            }
+        </script>
+        </center>
+    </body>
+</html>

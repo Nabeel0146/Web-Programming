@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Color Change</title>
+        <style>
+            button{
+                padding: 20;
+                border: solid 2px;
+                border-radius: 30px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <center>
+           <p style="padding-top: 280px;"></p>
+            <button onclick="changebgcolor()">Change Color</button>
+
+            <script>
+
+                function changebgcolor(){
+                const colors=[
+                "#FF5733", // Red-Orange
+                "#33FF57", // Green
+                "#3357FF", // Blue
+                "#FF33A1", // Pink
+                "#FFC300", // Yellow
+                "#8E44AD", // Purple
+                "#1ABC9C", // Teal
+                "#E74C3C", // Red
+                "#F39C12"
+                ]
+
+                const randomcolors=colors[Math.floor(Math.random()* colors.length)];
+
+                document.body.style.backgroundColor=randomcolors;
+                }
+            </script>
+        </center>
+    </body>
+</html>

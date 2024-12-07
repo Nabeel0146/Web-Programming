@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Mouse Event</title>
+    </head>
+    <body>
+        
+        <center>
+            <h2>Mouse Hover Program</h2>
+            <p>Hover over the mouse to view the mouseover function</p>
+            <img id="image" src="/home/ksb/Downloads/smile.png" onmouseover="mouseover()" onmouseout="mouseout()" width="200">
+        
+        </center>
+        <script>
+            function mouseover(){
+                document.getElementById("image").src="/home/ksb/Downloads/pngwing.com.png"
+            }
+            function mouseout(){
+                document.getElementById("image").src="/home/ksb/Downloads/smile.png"
+            }
+        </script>
+    </body>
+</html>
